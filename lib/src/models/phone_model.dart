@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 class PhoneModel {
-  int ddd;
-  String phone;
+  final int ddd;
+  final String phone;
 
   PhoneModel({
     required this.ddd,
@@ -19,8 +19,8 @@ class PhoneModel {
 
   factory PhoneModel.fromMap(Map<String, dynamic> map) {
     return PhoneModel(
-      ddd: map['ddd'] as int,
-      phone: map['phone'] as String,
+      ddd: map['ddd'] ?? 0,
+      phone: map['phone'] ?? "",
     );
   }
 

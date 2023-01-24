@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 class CityModel {
-  int id;
-  String name;
+  final int id;
+  final String name;
 
   CityModel({
     required this.id,
@@ -19,8 +19,8 @@ class CityModel {
 
   factory CityModel.fromMap(Map<String, dynamic> map) {
     return CityModel(
-      id: map['id'] as int,
-      name: map['name'] as String,
+      id: map['id'] ?? 0,
+      name: map['name'] ?? '',
     );
   }
 

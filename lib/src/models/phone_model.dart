@@ -20,7 +20,7 @@ class PhoneModel {
   factory PhoneModel.fromMap(Map<String, dynamic> map) {
     return PhoneModel(
       ddd: map['ddd'] ?? 0,
-      phone: map['phone'] ?? "",
+      phone: map['phone'] ?? '',
     );
   }
 

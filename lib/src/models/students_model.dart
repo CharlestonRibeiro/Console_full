@@ -41,7 +41,7 @@ class StudentsModel {
     return StudentsModel(
       id: map['id'] ?? 0,
       name: map['name'] ?? '',
-      age: map['age'] ?? '',
+      age: map['age'] ?? 0,
       nameCourses: List<String>.from((map['nameCourses'] ?? <String>[])),
       address: AddressModel.fromMap(map['address'] ?? <String, dynamic>{}),
       courses: map['courses']

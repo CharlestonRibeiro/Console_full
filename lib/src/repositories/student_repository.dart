@@ -11,11 +11,11 @@ class StudentRepository {
       throw Exception();
     }
 
-    final List<StudentsModel> result =
-        StudentsModel.fromJson(jsonDecode(response.body))
-            as List<StudentsModel>;
+    final result = jsonDecode(response.body);
 
-    return result;
+    return result.map<StudentsModel>((student) {
+      return StudentsModel.fromMap(student);
+    }).toList();
   }
 
   Future<StudentsModel> findById(int id) async {
@@ -68,3 +68,4 @@ class StudentRepository {
     }
   }
 }
+

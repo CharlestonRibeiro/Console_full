@@ -19,7 +19,7 @@ class StudentRepository {
   }
 
   Future<StudentsModel> findById(int id) async {
-    var url = Uri.https('http://192.168.2.6:8081/students/$id');
+    var url = Uri.parse('http://192.168.2.6:8081/students/$id');
     var response = await http.get(url);
 
     if (response.statusCode != 200) {
@@ -68,4 +68,3 @@ class StudentRepository {
     }
   }
 }
-

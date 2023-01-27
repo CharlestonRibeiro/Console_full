@@ -5,7 +5,7 @@ import 'package:args/command_runner.dart';
 
 class FindAllCommand extends Command {
   final StudentRepository studentRepository;
-
+  
   @override
   String get description => 'Find all Students';
 
@@ -13,6 +13,7 @@ class FindAllCommand extends Command {
   String get name => 'findAll';
 
   FindAllCommand(this.studentRepository);
+  
 
   @override
   void run() async {

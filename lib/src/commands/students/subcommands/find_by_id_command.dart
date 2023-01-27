@@ -4,15 +4,17 @@ import 'package:args/command_runner.dart';
 class FindByIdCommand extends Command {
   final StudentRepository studentRepository;
 
+  FindByIdCommand(this.studentRepository) {
+    argParser.addOption('id', help: 'Student Id', abbr: 'i');
+  }
+
   @override
   String get description => 'Find Students By Id';
 
   @override
   String get name => 'byId';
 
-  FindByIdCommand(this.studentRepository) {
-    argParser.addOption('id', help: 'Student Id', abbr: 'i');
-  }
+  
   
 
   @override

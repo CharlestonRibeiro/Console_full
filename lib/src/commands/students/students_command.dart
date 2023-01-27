@@ -1,3 +1,4 @@
+import 'package:adf_cli/src/commands/students/subcommands/delete_comand.dart';
 import 'package:adf_cli/src/commands/students/subcommands/find_all_command.dart';
 import 'package:adf_cli/src/commands/students/subcommands/find_by_id_command.dart';
 import 'package:adf_cli/src/commands/students/subcommands/insert_command.dart';
@@ -18,5 +19,6 @@ class StudentsCommand extends Command {
     addSubcommand(FindByIdCommand(studentRepository));
     addSubcommand(InsertCommand(studentRepository));
     addSubcommand(UpdateCommand(studentRepository));
+    addSubcommand(DeleteCommand(studentRepository));
   }
 }

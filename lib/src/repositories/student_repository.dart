@@ -60,7 +60,7 @@ class StudentRepository {
   }
 
   Future<void> deleteById(int id) async {
-    var url = Uri.https('http://192.168.2.6:8081/students/$id');
+    var url = Uri.parse('http://192.168.2.6:8081/students/$id');
     final response = await http.delete(url);
 
     if (response.statusCode != 200) {

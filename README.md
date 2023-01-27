@@ -9,7 +9,7 @@ API consumida localmente com o usp package [json_rest_server](https://pub.dev/pa
 - [args](https://pub.dev/packages/args)
 - [http](https://pub.dev/packages/http)
 
-## Metodos
+## Metodos:
 
      delete
      find_all
